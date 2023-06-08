@@ -1,0 +1,32 @@
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database Connectio Setting -->
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">1234</property>
+		
+		<!-- JDBC Connection Pool (USE teh build-in) -->
+		<property name="connection.pool_size">1</property>
+		
+		<!-- SWL dialect -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+		
+		<!-- Drop and re-create the database schema on startuo -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- 
+			create -> creates a new database
+			update -> update the db 
+		-->
+		
+		<!-- Names te annotated entity class -->
+		<mapping class="hibernate.learning.MapFile.EmployeDetails"/>
+		
+	</session-factory>
+</hibernate-configuration>
