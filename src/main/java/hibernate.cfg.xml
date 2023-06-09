@@ -26,7 +26,7 @@
 		-->
 		
 		<!-- Names te annotated entity class -->
-		<mapping class="hibernate.learning.MapFile.EmployeDetails"/>
+		<mapping class="hibernate.learning.MapFile.UserDetails"/>
 		
 	</session-factory>
 </hibernate-configuration>
