@@ -16,9 +16,9 @@ public class App
     {
         System.out.println( "Hello World!" );
         EmployeDetails emp = new EmployeDetails();
-        emp.setId(123);
-        emp.setName("Harish");;
-        emp.setSalary(800000);
+        //emp.setId(5678);
+        emp.setName("miachel");;
+        emp.setSalary(95000);
         
         SessionFactory sf = new Configuration().configure().buildSessionFactory();
         Session s = sf.openSession();
@@ -28,9 +28,25 @@ public class App
         	s.saveOrUpdate(emp);
         	s.getTransaction().commit();
         	
-        }catch(Exception e)
+        }
+        catch(Exception e)
         {
         	System.out.println(e.getMessage());
         }
+        s.close();
+
+        emp = null;
+        s = sf.openSession();
+        s.beginTransaction();
+        try
+        {
+            emp = (EmployeDetails)s.get(EmployeDetails.class,1234);
+            System.out.println("id : " +emp.getId() +" emp name : "+emp.getName());
+        }
+        catch(Exception e)
+        {
+        	System.out.println(e.getMessage());
+        }
+        
     }
 }

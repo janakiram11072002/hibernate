@@ -2,9 +2,9 @@
 	<session-factory>
 		<!-- Database Connectio Setting -->
 		<property name="connection.driver_class">org.postgresql.Driver</property>
-		<property name="connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
 		<property name="connection.username">postgres</property>
-		<property name="connection.password">1234</property>
+		<property name="connection.password">postgres</property>
 		
 		<!-- JDBC Connection Pool (USE teh build-in) -->
 		<property name="connection.pool_size">1</property>

@@ -2,6 +2,7 @@ package hibernate.learning.MapFile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 //import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import jakarta.persistence.Id;
 @Entity (name="employeedetails")
 public class EmployeDetails {
 	
-	@Id
+	@Id @GeneratedValue
 	private int id;
 	@Column(name="Employee_Name")
 	private String name;
@@ -40,3 +41,4 @@ public class EmployeDetails {
 		this.salary = salary;
 	}
 }
+
