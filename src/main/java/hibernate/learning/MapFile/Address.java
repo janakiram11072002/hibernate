@@ -1,6 +1,8 @@
 package hibernate.learning.MapFile;
 
-import jakarta.persistence.Embeddable;
+import javax.persistence.Embeddable;
+
+// import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Address {
